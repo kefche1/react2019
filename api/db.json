@@ -1,16 +1,16 @@
 {
   "streams": [
     {
-      "title": "tzvetan",
-      "description": "description of some",
-      "userId": "101772483065909788170",
-      "id": 1
-    },
-    {
-      "title": "veneta",
+      "title": "veneta marinova",
       "description": "another description",
       "userId": "101772483065909788170",
       "id": 2
+    },
+    {
+      "title": "katerina",
+      "description": "her description",
+      "userId": "101772483065909788170",
+      "id": 3
     }
   ]
 }

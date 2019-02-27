@@ -18,6 +18,12 @@ class StreamEdit extends React.Component {
         if(!this.props.stream) {
             return <div>Loading...</div>;
         }
+
+        //handle the case when user directly loads /streams/delete/:id in the browser:
+        if(!this.props.isSignedIn) {
+            return <div>Please Log in to edit streams.</div>;
+        }
+
         return (
             <div>
                 <h3>Edit a Stream</h3>
@@ -27,9 +33,10 @@ class StreamEdit extends React.Component {
     }
 }
 
-const mapStateToProps = ({streams}, ownProps) => { //ownProps === this.props
+const mapStateToProps = ({streams, auth}, ownProps) => { //ownProps === this.props
     return {
-        stream : streams[ownProps.match.params.id]
+        stream : streams[ownProps.match.params.id],
+        isSignedIn : auth.isSignedIn
     };
 }
 
